@@ -9,6 +9,8 @@ class TwitterOEmbedder(object):
             self.init(app, cache, debug)
 
     def init(self, app, cache, timeout=None, debug=None):
+        if timeout is None:
+            timeout = 60*60*24
         twitter_timeout = 60*60*24*365
         if timeout > twitter_timeout:
             raise Exception("TwitterOEmbedder: Cache expiry should not exceed 1 year "
