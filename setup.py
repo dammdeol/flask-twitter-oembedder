@@ -21,7 +21,7 @@ setup(
     test_suite="nose.collector",
     install_requires=[
         'Flask',
-        'Flask-Cache',
+        'Flask-Caching',
         'requests',
         'requests_oauthlib',
         ],
